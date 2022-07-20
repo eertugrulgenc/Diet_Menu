@@ -1,0 +1,18 @@
+
+{% block body %}
+
+<div class="section">
+    <div class="section-ort">
+        <form method="POST">
+            {% csrf_token %}
+        <h3 id="login-başlık">Login Account</h3>
+        <input type="text" class="form-control" placeholder="username" name="username">
+        <input type="password" class="form-control" placeholder="password" name="password">
+     <div class="button-box">
+        <input type="submit" value="Login" class="btn login-btn">
+     </div>
+    
+        </form>
+    </div>    
+</div>
+{% endblock body %}

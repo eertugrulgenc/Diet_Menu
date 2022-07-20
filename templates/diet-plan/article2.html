@@ -1,0 +1,43 @@
+{% block body %}
+<table class="table table-striped plan">
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Morning</th>
+  
+      </tr>
+    </thead>
+    
+    <tbody>
+      {% for mp in morningPlan %}
+      <tr>
+        <th scope="row">{{morningTime}}</th>
+        <td>{{mp}}</td>
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+    
+  </table>
+  <table class="table table-striped plan">
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+  
+        <th scope="col">Evening</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      {% for eve in eveningPlan %}
+      <tr>
+        <th scope="row">{{eveningTime}}</th>
+        <td>{{eve}}</td>
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+    
+  </table>
+
+{% endblock body %}

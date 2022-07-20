@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Anasayfa {% endblock title %} 
+{% block link %} {% static 'css/home.css' %} {% endblock link %}
+{% block body %}
+    <div class="cont">
+    {% include 'home/header.html'  %}
+    {% include 'home/section.html' %}
+    <img src="{% static 'img/home-background.jpg' %}" id="background-image">
+    </div>
+    {% block script %} {% static 'js/home-section.js' %} {% endblock script %}
+{% endblock body %}

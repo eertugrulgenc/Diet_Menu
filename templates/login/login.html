@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Uygulamaya Giriş {% endblock title %} 
+{% block link %} {% static 'css/login.css' %} {% endblock link %}
+{% block body %}
+    <div class="cont">
+    {% include 'login/header.html' %}
+    
+    {% include 'login/section.html' %}
+    <img src="{% static 'img/login-anasayfa.jpg' %}" id="background-image"> 
+      
+    </div>
+{% endblock body %}

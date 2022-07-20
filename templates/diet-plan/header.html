@@ -1,0 +1,13 @@
+{% block body %}
+<div class="header"> 
+    <div class="header-ort">
+        <div class="heads">
+        <div id="user-name"> Patient : {{request.user.username}} &nbsp;</div>
+            
+        <div id="user-name"> BMİ :   {{patientInfos.bodyBmi}}   &nbsp; </div>
+        <div id="user-name"> BodyType :   {{patientInfos.bodyInfo}}   </div>
+    
+        </div>
+    </div>
+</div>
+{% endblock body%}

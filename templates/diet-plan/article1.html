@@ -1,0 +1,25 @@
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">FoodId</th>
+            <th scope="col">FoodName</th>
+            <th scope="col">FoodCalorie</th>
+            <th scope="col">SelectFood</th>
+          </tr>
+        </thead>
+        {% for foodInfo in foodInfos %}
+        <tbody>
+          <tr>
+            <th scope="row">{{foodInfo.id}}</th>
+            <td>    {{foodInfo.foodName}}</td>
+            <td> {{foodInfo.foodCalorie}}</td>
+            <td> <input type="checkbox" value={{foodInfo.id}} name="foods"></td>
+          </tr>
+       
+         
+        </tbody>
+        {% endfor %}
+      </table>
+
+{% endblock body%}

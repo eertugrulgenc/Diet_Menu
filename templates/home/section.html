@@ -1,0 +1,25 @@
+{% block body %}
+    <div class="section">
+        <div class="section-ort">
+            <h3 id="section-header">Body height and weight index</h3>
+            <br>
+            <form method="POST">
+                {% csrf_token %}
+            <ul style="list-style-type:none">
+                <li>Patient length : <input type="number" name="patientSize" id="length"></li>
+                <li>Patient Weight : <input type="number" name="patientWeight" id="weight"></li>
+            </ul>
+            <br>
+            <input type="button" class="btn btn-outline-light calculate" value="Calculate" id="calculate">
+            <br> <br>
+        
+            <ul style="list-style-type:none">
+                <li>Your BMI is : <label id="BMI" > </label> </li>
+                <li>You are : <label id="info" > </label> </li>
+            </ul>
+            <br>
+            <input type="submit" class="btn btn-outline-light" value="Get Diet Plan" id="diet-plan">
+        </form>
+        </div>
+    </div>
+{% endblock body %}

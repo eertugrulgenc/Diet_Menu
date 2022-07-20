@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Diet Menu {% endblock title %} 
+{% block link %} {% static 'css/menus.css' %} {% endblock link %}
+{% block body %}
+    <div class="cont">
+        {% include 'diet-plan/header.html'  %}
+        
+        <main>
+            <article>
+                <form method="POST">
+                    {% csrf_token %}
+                {% include 'diet-plan/article1.html'  %}
+            </article>
+            <button type="submit" class="btn btn-dark creater">Create</button>
+        </form>
+            <article>
+                {% include 'diet-plan/article2.html'  %}
+            </article>
+            
+        </main>
+        <img src="{% static 'img/menus.jpg' %}" id="background-image">
+    </div>
+{% endblock body %}
